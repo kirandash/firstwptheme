@@ -22,19 +22,21 @@
  * @uses my_simone_admin_header_style()
  * @uses my_simone_admin_header_image()
  */
+
 function my_simone_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'my_simone_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
+		'default-text-color'     => 'ffffff',
+		'width'                  => 1280,
+		'height'                 => 300,
+		'flex-height'            => false,
 		'wp-head-callback'       => 'my_simone_header_style',
 		'admin-head-callback'    => 'my_simone_admin_header_style',
 		'admin-preview-callback' => 'my_simone_admin_header_image',
 	) ) );
 }
 add_action( 'after_setup_theme', 'my_simone_custom_header_setup' );
+                
 
 if ( ! function_exists( 'my_simone_header_style' ) ) :
 /**

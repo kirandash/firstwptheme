@@ -535,7 +535,7 @@ a:active {
 	clear: both;
 }
 /*--------------------------------------------------------------
-9.0 Widgets
+x.x Header
 --------------------------------------------------------------*/
 .site-branding {
     padding: 6rem 0;
@@ -577,7 +577,12 @@ a:active {
     color: #fff;
     color: hsl(0, 0%, 100%);
 }
-                    
+
+.header-image img {
+    display: block;
+    margin: 0 auto;
+}
+                   
 /* Header responsive */
 @media screen and (max-width: 600px) {
     .site-branding { padding: 0; }
