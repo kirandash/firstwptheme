@@ -100,7 +100,9 @@ function my_simone_scripts() {
                 
 		
 		wp_enqueue_script( 'my-simone-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('my-simone-superfish'), '20140328', true );
-                
+		
+		wp_enqueue_script( 'my-simone-hide-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20140404', true );
+                               
 						
 		wp_enqueue_script( 'my-simone-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

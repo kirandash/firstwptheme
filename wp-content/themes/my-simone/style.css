@@ -786,6 +786,14 @@ x.x Header
     background: hsl(0, 0%, 30%);
 }
 
+
+.search-box-wrapper {
+    z-index: 2;
+    width: 100%;
+    display: none;
+}
+                
+
 @media screen and (max-width: 600px) {
     .search-toggle {
         position: absolute;
