@@ -138,6 +138,7 @@ add_action( 'save_post',     'my_simone_category_transient_flusher' );
  * Social media icon menu as per http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2
  */
 
+
 function my_simone_social_menu() {
     if ( has_nav_menu( 'social' ) ) {
 	wp_nav_menu(
@@ -149,9 +150,11 @@ function my_simone_social_menu() {
 			'menu_id'         => 'menu-social-items',
 			'menu_class'      => 'menu-items',
 			'depth'           => 1,
+			'link_before'     => '<span class="screen-reader-text">',
+			'link_after'      => '</span>',
 			'fallback_cb'     => '',
 		)
 	);
     }
 }
-                
+                             
