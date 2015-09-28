@@ -51,6 +51,12 @@
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
             
+            
+            <div class="search-toggle">
+                <i class="fa fa-search"></i>
+                <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'my-simone' ); ?></a>
+            </div>
+                
             <?php my_simone_social_menu(); ?>
             
 		</nav><!-- #site-navigation -->
