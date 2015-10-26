@@ -42,6 +42,7 @@ and Blueprint http://www.blueprintcss.org/
 	10.3 - Comments
 11.0 - Infinite scroll
 12.0 - Media
+13.0 - Footer
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -1511,8 +1512,38 @@ object {
 	max-width: 100%;
 }
 
+/* Featured Images */
+
+.single-post-thumbnail { 
+    background: #b2b2b2 url(images/pattern.svg) repeat; 
+}
+
+.single-post-thumbnail img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width: 1820px) {
+    .image-shifter {
+        width: 1060px;
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1540px) and (max-width: 1820px) {
+    .image-shifter { margin-right: 380px;}
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1819px) {
+    .image-shifter {
+        width: 1060px; 
+        float: right;
+    }
+}                
 /*--------------------------------------------------------------
- Footer
+13.0 Footer
 --------------------------------------------------------------*/
 
 .site-footer {
