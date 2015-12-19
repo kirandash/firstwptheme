@@ -30,33 +30,9 @@
         </div><!-- .entry-content -->
         
     
-        <footer class="entry-footer">
-            <?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-                <?php
-                    /* translators: used between list items, there is a space after the comma */
-                    $categories_list = get_the_category_list( __( ', ', 'my-simone' ) );
-                    if ( $categories_list && my_simone_categorized_blog() ) :
-                ?>
-                <span class="cat-links">
-                    <?php printf( __( 'Posted in %1$s', 'my-simone' ), $categories_list ); ?>
-                </span>
-                <?php endif; // End if categories ?>
-    
-                <?php
-                    /* translators: used between list items, there is a space after the comma */
-                    $tags_list = get_the_tag_list( '', __( ', ', 'my-simone' ) );
-                    if ( $tags_list ) :
-                ?>
-                <span class="tags-links">
-                    <?php printf( __( 'Tagged %1$s', 'my-simone' ), $tags_list ); ?>
-                </span>
-                <?php endif; // End if $tags_list ?>
-            <?php endif; // End if 'post' == get_post_type() ?>
-    
-            <?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-            <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'my-simone' ), __( '1 Comment', 'my-simone' ), __( '% Comments', 'my-simone' ) ); ?></span>
-            <?php endif; ?>
-    
+        
+        <footer class="entry-footer continue-reading">
+            <?php echo '<a href="' . get_permalink() . '" title="' . __('Continue Reading ', 'my-simone') . get_the_title() . '" rel="bookmark">Continue Reading<i class="fa fa-arrow-circle-o-right"></i></a>'; ?>
         </footer><!-- .entry-footer -->
 	</div>
 </article><!-- #post-## -->
