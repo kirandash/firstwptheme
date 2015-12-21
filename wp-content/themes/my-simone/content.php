@@ -16,6 +16,14 @@
     }
     ?>         
         <header class="entry-header">
+                        
+            <?php
+            // Display a thumb tack in the top right hand corner if this post is sticky
+            if (is_sticky()) {
+                echo '<i class="fa fa-thumb-tack sticky-post"></i>';
+            }
+            ?>
+                            
             <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
     
             <?php if ( 'post' == get_post_type() ) : ?>
