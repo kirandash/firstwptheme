@@ -6,6 +6,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="index-box">
+    <?php
+    if (has_post_thumbnail()) {
+        echo '<div class="small-index-thumbnail clear">';
+        echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'my-simone') . get_the_title() . '" rel="bookmark">';
+        echo the_post_thumbnail('index-thumb');
+        echo '</a>';
+        echo '</div>';
+    }
+    ?>         
         <header class="entry-header">
             <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
     
