@@ -40,7 +40,14 @@
                 echo '<i class="fa fa-thumb-tack sticky-post"></i>';
             }
             ?>
-                            
+			<?php
+                /* translators: used between list items, there is a space after the comma */
+                $category_list = get_the_category_list( __( ', ', 'my-simone' ) );
+            
+                if ( my_simone_categorized_blog() ) {
+                    echo '<div class="category-list">' . $category_list . '</div>';
+                }
+            ?>                            
             <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
     
             <?php if ( 'post' == get_post_type() ) : ?>
