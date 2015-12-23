@@ -102,7 +102,15 @@ add_action( 'widgets_init', 'my_simone_widgets_init' );
  * Enqueue scripts and styles.
  */
 function my_simone_scripts() {
-	wp_enqueue_style( 'my-simone-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'my-simone-style', get_stylesheet_uri() );
+		
+				
+		if (is_page_template('page-templates/page-nosidebar.php')) {
+			wp_enqueue_style( 'my-sinome-layout-style' , get_template_directory_uri() . '/layouts/no-sidebar.css');
+		} else {
+			wp_enqueue_style( 'my-sinome-layout-style' , get_template_directory_uri() . '/layouts/content-sidebar.css');
+		}
+						
         
         wp_enqueue_style( 'my-sinome-layout-style' , get_template_directory_uri() . '/layouts/content-sidebar.css');
 
